@@ -1,5 +1,1 @@
-# WICHTIG: Ersetze XXXXXXXXXXXXXXXX mit deiner echten Publisher-ID von AdMob!
-# Die ID findest du in deinem AdMob Dashboard unter "Einstellungen" -> "Konto-Informationen"
-# Sie sieht so aus: pub-1234567890123456
-
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-9895223563408588, DIRECT, f08c47fec0942fa0
