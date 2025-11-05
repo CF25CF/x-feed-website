@@ -1,0 +1,60 @@
+╔════════════════════════════════════════════════════════════╗
+║  ANLEITUNG: GitHub Pages für X-Feed einrichten            ║
+╚════════════════════════════════════════════════════════════╝
+
+SCHRITT 1: Repository auf GitHub erstellen
+───────────────────────────────────────────────────────────
+1. Geh auf: https://github.com/new
+2. Repository Name: "x-feed-website" (oder ein anderer Name)
+3. Stelle sicher: "Public" ist ausgewählt (nicht Private!)
+4. Haken bei "Add a README file" NICHT setzen
+5. Klicke auf "Create repository"
+
+
+SCHRITT 2: Dateien hochladen
+───────────────────────────────────────────────────────────
+1. Auf der Repository-Seite: Klicke "uploading an existing file"
+2. Ziehe ALLE 3 Dateien rein:
+   - index.html
+   - app-ads.txt
+   - ANLEITUNG.txt
+3. Klicke "Commit changes"
+
+
+SCHRITT 3: GitHub Pages aktivieren
+───────────────────────────────────────────────────────────
+1. Gehe zu: Settings (oben rechts im Repository)
+2. Klicke links auf "Pages"
+3. Bei "Source": Wähle "Deploy from a branch"
+4. Bei "Branch": Wähle "main" und "/ (root)"
+5. Klicke "Save"
+6. WARTE 2-3 Minuten!
+7. Aktualisiere die Seite - oben sollte jetzt stehen:
+   "Your site is live at https://DEINUSERNAME.github.io/x-feed-website/"
+
+
+SCHRITT 4: app-ads.txt aktualisieren
+───────────────────────────────────────────────────────────
+1. Gehe zu deinem AdMob Dashboard
+2. Kopiere deine Publisher-ID (sieht aus wie: pub-1234567890123456)
+3. Auf GitHub: Öffne die Datei "app-ads.txt"
+4. Klicke auf den Stift (Edit)
+5. Ersetze "pub-XXXXXXXXXXXXXXXX" mit deiner echten ID
+6. Klicke "Commit changes"
+
+
+SCHRITT 5: URL in AdMob eintragen
+───────────────────────────────────────────────────────────
+Deine finale URL ist:
+https://DEINUSERNAME.github.io/x-feed-website/
+
+Oder direkt zur app-ads.txt:
+https://DEINUSERNAME.github.io/x-feed-website/app-ads.txt
+
+Trage diese URL in AdMob als "Developer Website" ein!
+
+
+FERTIG! 🎉
+───────────────────────────────────────────────────────────
+Deine App sollte jetzt von AdMob verifiziert werden.
+Die Überprüfung kann 24-48 Stunden dauern.
