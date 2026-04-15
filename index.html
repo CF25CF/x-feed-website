@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X-Feed - Deine News App | Impressum</title>
+    <title>X-Feed - Deine News App</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * {
             margin: 0;
@@ -36,7 +37,7 @@
 
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 50px 20px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 20px;
@@ -44,32 +45,34 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
-        .logo {
-            font-size: 80px;
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 26px;
             margin-bottom: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
             animation: float 3s ease-in-out infinite;
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-8px); }
         }
 
         h1 {
-            font-size: 3.5em;
+            font-size: 3.2em;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .tagline {
-            font-size: 1.3em;
+            font-size: 1.2em;
             opacity: 0.95;
-            margin-bottom: 30px;
             font-weight: 300;
         }
 
-        .description {
+        .section {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
             padding: 40px;
@@ -78,29 +81,52 @@
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         }
 
-        .description h2 {
-            font-size: 1.8em;
+        .section h2 {
+            font-size: 1.7em;
             margin-bottom: 20px;
             color: #e3f2fd;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 12px;
         }
 
-        .description p {
-            font-size: 1.15em;
-            margin-bottom: 15px;
+        .section h3 {
+            font-size: 1.25em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            color: #bbdefb;
+        }
+
+        .section p, .section li {
+            font-size: 1.05em;
+            margin-bottom: 12px;
             opacity: 0.95;
+        }
+
+        .section ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+        }
+
+        .section strong {
+            color: #ffffff;
+            font-weight: 600;
         }
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .feature {
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
+            padding: 25px 20px;
+            border-radius: 12px;
             text-align: center;
         }
 
@@ -109,69 +135,71 @@
             margin-bottom: 10px;
         }
 
-        .impressum {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
+        .feature h3 {
+            font-size: 1.15em;
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #ffffff;
         }
 
-        .impressum h2 {
-            font-size: 2em;
-            margin-bottom: 30px;
-            color: #e3f2fd;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-            padding-bottom: 15px;
+        .feature p {
+            font-size: 0.95em;
+            margin-bottom: 0;
         }
 
-        .impressum-content {
-            text-align: left;
-            font-size: 1.1em;
-            line-height: 1.8;
+        .badge {
+            display: inline-block;
+            background: rgba(76, 175, 80, 0.3);
+            color: #c8e6c9;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 6px;
         }
 
-        .impressum-section {
-            margin-bottom: 25px;
-        }
-
-        .impressum-section h3 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
+        a {
             color: #bbdefb;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(187, 222, 251, 0.4);
         }
 
-        .impressum-section p {
-            margin-left: 15px;
-            opacity: 0.95;
+        a:hover {
+            border-bottom-color: #bbdefb;
+        }
+
+        .impressum-block {
+            margin-bottom: 20px;
+        }
+
+        .impressum-block p {
+            margin-left: 5px;
         }
 
         footer {
             text-align: center;
             padding: 30px 20px;
-            margin-top: 50px;
+            margin-top: 30px;
             opacity: 0.8;
             font-size: 0.95em;
         }
 
-        .scroll-indicator {
-            text-align: center;
-            margin-top: 20px;
-            opacity: 0.7;
-            font-size: 0.9em;
+        footer a {
+            margin: 0 10px;
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
 
-            .logo {
-                font-size: 60px;
+            .app-icon {
+                width: 90px;
+                height: 90px;
             }
 
-            .description, .impressum {
+            .section {
                 padding: 25px;
             }
 
@@ -184,88 +212,120 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">📰</div>
+            <img src="icon.png" alt="X-Feed" class="app-icon">
             <h1>X-Feed</h1>
-            <p class="tagline">Die wichtigsten News - kurz zusammengefasst</p>
+            <p class="tagline">Die wichtigsten News – kurz zusammengefasst</p>
         </header>
 
-        <div class="description">
+        <div class="section">
             <h2>Was ist X-Feed?</h2>
             <p>
-                <strong>X-Feed</strong> ist deine moderne News-App für iOS, die dir täglich die wichtigsten Nachrichten
-                aus Politik, Wirtschaft und Wissenschaft präsentiert – kurz, prägnant und übersichtlich.
+                <strong>X-Feed</strong> ist deine moderne News-App für iOS und Android, die dir täglich die wichtigsten
+                Nachrichten aus Politik, Wirtschaft und Wissenschaft präsentiert – kurz, prägnant und übersichtlich.
             </p>
             <p>
-                Keine endlosen Artikel mehr durchforsten! X-Feed fasst jede Nachricht in drei präzisen Sätzen zusammen,
-                damit du immer up-to-date bleibst, ohne Zeit zu verschwenden.
+                Keine endlosen Artikel mehr durchforsten! X-Feed fasst jede Nachricht in drei präzisen Sätzen
+                zusammen, damit du immer up-to-date bleibst, ohne Zeit zu verschwenden.
             </p>
 
             <div class="features">
                 <div class="feature">
                     <div class="feature-icon">⚡</div>
                     <h3>Schnell & Effizient</h3>
-                    <p>Alle News in 3 Sätzen</p>
+                    <p>Jede News in 3 Sätzen</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🎯</div>
                     <h3>Top News</h3>
                     <p>Das Wichtigste zuerst</p>
                 </div>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Datenschutz</h3>
+                    <p>Kein Tracking, keine Werbe-IDs</p>
+                </div>
             </div>
+
+            <p style="margin-top: 25px;">
+                <span class="badge">iOS</span>
+                <span class="badge">Android</span>
+                <span class="badge">Premium ohne Werbung</span>
+            </p>
         </div>
 
-        <div class="impressum" id="impressum">
+        <div class="section" id="impressum">
             <h2>Impressum</h2>
-            <div class="impressum-content">
-                <div class="impressum-section">
-                    <h3>Angaben gemäß § 5 TMG</h3>
-                    <p>
-                        Max Mustermann<br>
-                        Musterstraße 123<br>
-                        12345 Musterstadt<br>
-                        Deutschland
-                    </p>
-                </div>
 
-                <div class="impressum-section">
-                    <h3>Kontakt</h3>
-                    <p>
-                        E-Mail: kontakt@x-feed.de<br>
-                        Telefon: +49 (0) 123 456789
-                    </p>
-                </div>
+            <div class="impressum-block">
+                <h3>Angaben gemäß § 5 TMG</h3>
+                <p>
+                    Christian Feldbusch Softwareentwicklung<br>
+                    c/o IP-Management #7727<br>
+                    Ludwig-Erhard-Str. 18<br>
+                    20459 Hamburg<br>
+                    Deutschland
+                </p>
+            </div>
 
-                <div class="impressum-section">
-                    <h3>Verantwortlich für den Inhalt</h3>
-                    <p>
-                        Max Mustermann<br>
-                        Musterstraße 123<br>
-                        12345 Musterstadt
-                    </p>
-                </div>
+            <div class="impressum-block">
+                <h3>Kontakt</h3>
+                <p>
+                    E-Mail: <a href="mailto:Christian.feldbusch.business@gmail.com">Christian.feldbusch.business@gmail.com</a>
+                </p>
+            </div>
 
-                <div class="impressum-section">
-                    <h3>Haftungsausschluss</h3>
-                    <p>
-                        <strong>Haftung für Inhalte:</strong><br>
-                        Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt.
-                        Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
-                        können wir jedoch keine Gewähr übernehmen.
-                    </p>
-                </div>
+            <div class="impressum-block">
+                <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+                <p>
+                    Christian Feldbusch<br>
+                    c/o IP-Management #7727<br>
+                    Ludwig-Erhard-Str. 18<br>
+                    20459 Hamburg
+                </p>
+            </div>
 
-                <div class="impressum-section">
-                    <h3>Datenschutz</h3>
-                    <p>
-                        Die Nutzung unserer App ist ohne Angabe personenbezogener Daten möglich.
-                        Weitere Informationen zum Datenschutz finden Sie in unserer Datenschutzerklärung.
-                    </p>
-                </div>
+            <div class="impressum-block">
+                <h3>Haftung für Inhalte</h3>
+                <p>
+                    Die Inhalte dieser Seiten und der App wurden mit größter Sorgfalt erstellt.
+                    Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch
+                    keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene
+                    Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+                </p>
+            </div>
+
+            <div class="impressum-block">
+                <h3>Haftung für Links</h3>
+                <p>
+                    Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen
+                    Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+                    Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der
+                    Seiten verantwortlich.
+                </p>
+            </div>
+
+            <div class="impressum-block">
+                <h3>Urheberrecht</h3>
+                <p>
+                    Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht.
+                    Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen
+                    des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+                </p>
+            </div>
+
+            <div class="impressum-block">
+                <h3>Datenschutz</h3>
+                <p>
+                    Die ausführliche Datenschutzerklärung findest du unter
+                    <a href="datenschutz.html">Datenschutzerklärung</a>.
+                </p>
             </div>
         </div>
 
         <footer>
-            <p>&copy; 2025 X-Feed. Alle Rechte vorbehalten.</p>
+            <a href="datenschutz.html">Datenschutzerklärung</a>
+            <br><br>
+            © 2026 X-Feed
         </footer>
     </div>
 </body>
